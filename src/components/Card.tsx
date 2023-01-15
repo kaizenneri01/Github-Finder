@@ -18,7 +18,12 @@ const Card: FC = () => {
   const userInfo = useSelector(selectAllUser);
 
   return (
-    <CardContainer>
+    <CardContainer
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3 }}
+    >
       <CardImage src={userInfo.avatar_url} alt="avatar" />
       <CardDiv>
         <CardName>{userInfo.name}</CardName>

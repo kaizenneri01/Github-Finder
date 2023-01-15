@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const ProjectContainer = styled.div`
   display: grid;
@@ -10,7 +11,7 @@ export const ProjectContainer = styled.div`
   transform: translate(-10px);
   transition: all 0.5s;
 `;
-export const ProjectBox = styled.div`
+export const ProjectBox = styled(motion.div)`
   padding: 15px;
   height: 12rem;
   background-color: #151515;

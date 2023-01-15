@@ -23,9 +23,7 @@ export const fetchUserRepo = createAsyncThunk(
 export const repoSlice = createSlice({
   name: "repo",
   initialState,
-  reducers: {
-    getUser(state, action) {},
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(fetchUserRepo.pending, (state, action) => {
@@ -43,5 +41,4 @@ export const repoSlice = createSlice({
 
 export const selectAllRepo = (state: any) => state.repo.repo;
 
-export const {} = repoSlice.actions;
 export default repoSlice.reducer;

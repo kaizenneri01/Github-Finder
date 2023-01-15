@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div)`
   margin: 5rem;
   padding: 15px;
   height: 18rem;
@@ -12,10 +13,6 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 7px 7px 10px 1px #0f0f0f;
-  transition: all 0.05s;
-  &:hover {
-    transform: scale(1.01);
-  }
 `;
 export const CardImage = styled.img`
   height: 100px;

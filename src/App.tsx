@@ -64,8 +64,18 @@ function App() {
             </ProjectModalBox>
           </ProjectModal>
         )}
-        <Title>github finder</Title>
-        <FormContainer>
+        <Title
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          github finder
+        </Title>
+        <FormContainer
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <TextInput
             type="text"
             placeholder="ENTER GITHUB USERNAME"
@@ -76,10 +86,21 @@ function App() {
         {userInfo.name && (
           <UserContainer>
             <Card />
-            <ProjectHeader>Projects</ProjectHeader>
+            <ProjectHeader
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Projects
+            </ProjectHeader>
             <ProjectContainer>
               {repo.map((item: any, index: Number) => (
-                <ProjectBox>
+                <ProjectBox
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ scale: 1.02 }}
+                  viewport={{ once: true }}
+                >
                   <ProjectTitle>{item.name}</ProjectTitle>
                   <ProjectDiv>
                     <ProjectButton

@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   background: -webkit-linear-gradient(180deg, #e98b1c, #e2ef4e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -16,13 +17,13 @@ export const Title = styled.h1`
   text-align: center;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const ProjectHeader = styled.h1`
+export const ProjectHeader = styled(motion.h1)`
   color: #e2dada;
   text-transform: uppercase;
   font-family: Poppins;

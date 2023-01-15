@@ -24,9 +24,7 @@ export const fetchReadMe = createAsyncThunk(
 export const readSlice = createSlice({
   name: "read",
   initialState,
-  reducers: {
-    getUser(state, action) {},
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(fetchReadMe.pending, (state, action) => {
@@ -44,5 +42,4 @@ export const readSlice = createSlice({
 
 export const selectAllReadMe = (state: any) => state.read.readMe;
 
-export const {} = readSlice.actions;
 export default readSlice.reducer;
